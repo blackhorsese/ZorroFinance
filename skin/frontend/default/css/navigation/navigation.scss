@@ -1,0 +1,334 @@
+header{	
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+	transition: all 0.3s;
+	position: fixed;
+	&.small{
+		background: #fff;
+		.top-menu {
+			margin: 0;
+			.menu-item {
+				a {
+					color: $brand_color;
+					&:before{
+						background-color: $brand_color;
+					}
+				}
+			}
+			.logo{
+				margin-top:0;
+				padding: 10px 0;
+				 svg {
+				    height: 33px;
+					 width: auto;
+					&.full{
+						display: none;
+					}
+					&.small{
+						display: block;
+					}			
+				}
+			}
+		}
+	} 
+	
+	@media only screen and (max-width: 767px){
+		background: #fff;
+		.top-menu {
+			margin-top: 0!important;
+			.logo{
+				margin-top:0!important;
+				padding: 10px 0!important;
+				 svg {
+				    height: 33px!important;
+					 width: auto!important;
+					&.full{
+						display: none!important;
+					}
+					&.small{
+						display: block!important;
+					}			
+				}
+			}
+		}
+	}
+	.top-menu {
+		z-index: 10;
+		margin-top: 30px;
+		-webkit-transition: all 0.1s ease-out;
+		-moz-transition: all 0.1s ease-out;
+		-ms-transition: all 0.1s ease-out;
+		-o-transition: all 0.1s ease-out;
+		transition: all 0.1s ease-out;
+		-webkit-transform: translate3d(0, -10px, 0);
+		-moz-transform: translate3d(0, -10px, 0);
+		-ms-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+		opacity: 0;
+		@media only screen and (max-width: 1200px){
+			margin-top: 35px;
+		}
+		@media only screen and (max-width: 991px){
+			margin-top: 20px;
+		}		
+		&.visible {
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			opacity: 1;
+		}
+		.phone {
+			color: #fff;
+			line-height: 53px;
+			font-size: 20px;
+			font-family: $Font_Light;
+			@media only screen and (max-width: 1200px){
+				font-size: 18px;
+			}
+			@media only screen and (max-width: 991px){
+				font-size: 14px;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: 12px;
+				line-height: 36px;
+			}
+			a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+		.menu-item {
+			color: #fff;
+			line-height: 53px;
+			font-size: 16px;
+			font-family: $Font_Light;
+			text-transform: uppercase;
+			font-weight: 300;
+			padding: 0 0 0 20px;
+			@media only screen and (max-width: 1200px){
+				font-size: 18px;
+			}
+			@media only screen and (max-width: 991px){
+				font-size: 14px;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: 12px;
+				line-height: 36px;
+			}
+			a {
+				color: #fff;
+				text-decoration: none;
+				position: relative;
+				outline: none!important;
+				padding: 3px 0;
+				&:before{
+					content: "";
+					position: absolute;
+					left: 0;
+					right: 100%;
+					height: 2px;
+					background-color: #fff;
+					bottom: 0;
+					transition: all 0.3s;
+				}
+				
+				&.active,
+				&:hover{
+					&:before{
+						right: 0;
+					}
+				}
+			}
+		}
+		.logo{
+			margin-top: -20px;
+			@media only screen and (max-width: 991px){
+				margin-top: -10px;
+			}
+			 svg {
+				width: 135px;
+				height: auto;
+				.text{
+					fill: $brand_color;
+				}
+				.symbol{
+					fill: $brand_color_2;
+				}			
+				@media only screen and (max-width: 991px){
+					width: 110px;
+				}
+				@media only screen and (max-width: 767px){
+					width: 100px;
+				}	
+				&.full{
+					display: block;
+				}
+				&.small{
+					display: none;
+				}
+			}
+		}
+	}
+	
+	.burger{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		width: 33px;
+    	height: 22px;
+		&.hidden{
+			display: none!important;
+		}
+		.line{
+			position: absolute;
+			right: 0;
+			width: 100%;
+			height: 2px;
+			background: #141842;
+			transition: all 0.3s;
+			&.line-1{
+				top: 0;
+			}
+			&.line-2{
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&.line-3{
+				top: 100%;
+				margin-top: -2px;
+			}
+		}
+	}
+}
+
+.language {
+	margin-left: 26px;
+	margin-top: 10px;
+	@media only screen and (max-width: 991px){
+		margin-left: 20px;
+	}
+	@media only screen and (max-width: 767px){
+		margin-left: 10px;
+		margin-top: 3px;
+	}
+	a {
+		display: block;
+		line-height: 1.1;
+		border: 2px solid $brand_color;
+		padding: 6px 7px 2px;
+		color: $brand_color;
+		font-size: 16px;
+		font-family: $Font_ExtraBold;
+		text-transform: uppercase;
+		text-decoration: none;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-ms-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+		@media only screen and (max-width: 991px){
+			font-size: 14px;
+		}
+		@media only screen and (max-width: 767px){
+			font-size: 12px;
+		}
+		&:hover {
+		  background: #fff;
+		  color: $brand_color;
+		}
+	}
+	.dropdown-menu{
+		border: 2px solid #fff;
+		right: 0;
+		left: auto;
+		width: auto;
+		min-width: auto;
+		background: transparent;
+		a {
+			border: none;
+			font-size: 14px;
+		}
+	}
+}
+.responsive-nav-overlay{
+	position: fixed;
+	right: 0;
+	top: 53px;
+	bottom: 0;
+	width: 100%;
+	z-index: 80;
+	opacity: 0;
+	pointer-events: none;
+	background: rgba(0,0,0,0.3);
+	transition: all 0.3s;
+}
+.responsive-nav{
+	position: fixed;
+	right: 0;
+	top: 53px;
+	height: auto;
+	bottom: auto;
+	width: 100%;
+	z-index: 900;
+	background: #fff;
+	transition: all 0.3s;
+	transform: translateX(100%);
+	border-top: 1px solid $brand_color;
+	ul{
+		margin: 0;
+		width: 100%;
+	}  
+	.menu-item {
+		width: 25%;
+		float: right;
+		text-align: center;
+		a {
+			color: $brand_color;
+			text-decoration: none;
+			position: relative;
+			outline: none !important;
+			padding: 3px 0;
+			padding: 10px 0;
+			display: block;
+			font-size: 14px;
+			text-transform: uppercase;
+			&:before{
+				background-color: $brand_color;
+			}
+		}
+	}
+}
+.show-responsive{
+	@media only screen and (max-width: 767px){
+		.responsive-nav-overlay{
+			opacity: 1;
+			pointer-events: all;
+		}
+		.responsive-nav{
+			transform: translateX(0);
+		}
+		header{
+			.burger{
+				.line{
+					&.line-1{
+						transform: rotate(45deg);
+						top: 10px;
+					}
+					&.line-2{
+						opacity: 0;							
+					}
+					&.line-3{
+						transform: rotate(-45deg);
+						top: 12px;
+					}
+				}
+			}
+		}
+	}
+}

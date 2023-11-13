@@ -1,0 +1,141 @@
+.section-services{
+	
+	.services-nav{
+		float: left;
+		width: 400px;
+		padding: 0 40px 0 0;	
+		@media (max-width: 991px) {
+			width: 350px;
+		}
+		@media (max-width: 767px) {
+			padding: 0;
+		}
+		p{
+			&.heading {							
+				font-family: $Font_ExtraBold;
+				color: $brand_color;
+				text-align: right;
+				@media (max-width: 1200px) {
+					font-size: 60px;
+				}
+				@media (max-width: 991px) {
+					font-size: 54px;
+				}
+				@media (max-width: 767px) {
+					text-align: left;	
+					font-size: 48px;
+				}
+				.top{
+					font-size: 24px;
+					font-family: $Font_Bold;
+					color: $brand_color_2;
+					@media (max-width: 1200px) {
+						font-size: 22px;
+					}
+					@media (max-width: 991px) {
+						font-size: 20px;
+					}
+					@media (max-width: 767px) {
+						text-align: left;	
+						font-size: 18px;
+					}
+				}
+				.bottom{
+					font-size: 64px;
+					line-height: 1.1;
+					@media (max-width: 1200px) {
+						font-size: 60px;
+					}
+					@media (max-width: 991px) {
+						font-size: 54px;
+					}
+					@media (max-width: 767px) {
+						text-align: left;	
+						font-size: 48px;
+					}
+				}
+			}
+		}
+		ul{
+			@media (max-width: 767px) {
+				margin-bottom: 0;
+			}
+			li{
+				margin-bottom: 5px;
+				//cursor: pointer;
+				text-align: right;	
+				@media (max-width: 767px) {
+					text-align: left;	
+				} 
+				span{
+					font-family: $Font_Bold;
+					display: block;
+					font-size: 19px;
+					position: relative;
+					padding: 0 25px 0 0;
+					opacity: 0.7;
+					transition: all 0.3s;
+					line-height: 1;
+					letter-spacing: -0.5px;
+					@media (max-width: 991px) {
+						font-size: 18px;
+					}
+					@media (max-width: 767px) {
+						padding: 0 0 0 25px;
+						font-size: 16px;
+					}
+					&:before{
+						position: absolute;
+						content: "";
+						right: 0;
+						width: 15px;
+						height: 16px;
+						margin-top: 2px;
+						top: 0px;
+						background: #333;						
+						@media (max-width: 767px) {
+							right: auto;
+							left: 0;
+							margin-top: 0;
+						}
+					}
+				}				
+				&:hover{
+					span{
+						opacity: 1;	
+					}					
+				}
+				&.active{
+					span{
+						opacity: 1;	
+					}					
+				}
+			}
+		}
+	}
+	.services-content{		
+		float: left;
+		width: calc(100% - 400px);
+		position: relative;	
+		padding-bottom: 30px;
+		@media (max-width: 991px) {
+			width: calc(100% - 350px);
+		}
+		@media (max-width: 767px) {
+			width: 100%;	
+		}
+	}
+}
+.no-touch{
+	.parallax-window {    
+		background: transparent!important;
+	}
+}
+.touch {
+	.parallax-window {
+		background-position: center center;
+		background-size: cover;
+		//background-attachment: fixed;		
+	}
+}
+

@@ -1,0 +1,47 @@
+.page-title{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	min-height: 500px;
+	position: relative;
+	.block-info{
+		position: absolute;
+		bottom:50px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		h1{
+			margin: 0;
+			padding: 10px;
+			color: #fff;
+		}
+		h5{
+			margin: 0;
+			padding: 0;
+			color: #fff;
+		}
+	}
+}
+.inner-page-title{
+	h1{
+		padding-top:50px;
+		@media only screen and (max-width: 767px){
+			padding-top:30px;
+		}
+	}
+}
+.tp-caption.tp-resizeme{
+	font-family: 'ZettaSansDemiBold';
+	font-weight: normal;
+	color: #ffffff;
+}
+.inner-content h2{
+	margin-top: 40px;
+	margin-bottom: 15px;
+	@media only screen and (max-width: 991px){
+		margin-top: 30px;
+	}
+	@media only screen and (max-width: 767px){
+		margin-top: 20px;
+	}
+}

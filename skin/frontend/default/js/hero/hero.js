@@ -1,0 +1,1 @@
+No Content: https://www.armatus.ch/skin/frontend/default/js/hero/hero.js
